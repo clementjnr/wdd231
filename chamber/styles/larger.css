@@ -1,0 +1,74 @@
+
+
+
+@media only screen and (min-width: 768px) {
+
+    
+    #menu {
+        display: none;
+    }
+
+   
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navigation li {
+        list-style: none;
+    }
+
+    .navigation li a {
+        border: none;
+        padding: 1rem;
+    }
+
+   
+    main {
+        padding: 2rem;
+    }
+
+   
+    #members.grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .member-card {
+        transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .member-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,.2);
+    }
+
+   
+    #members.list .member-card {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #members.list .member-card h3 {
+        margin: 0;
+    }
+
+    
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        text-align: center;
+    }
+
+}

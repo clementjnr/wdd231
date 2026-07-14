@@ -1,0 +1,66 @@
+
+[
+  {
+    "name": "TechNova Solutions",
+    "address": "15 Herbert Macaulay Way, Yaba, Lagos",
+    "phone": "+234 803 123 4567",
+    "website": "https://www.technovasolutions.com",
+    "image": "technova.webp",
+    "membership": 3,
+    "description": "Software development and IT consulting company."
+  },
+  {
+    "name": "GreenMart Supermarket",
+    "address": "24 Commercial Avenue, Yaba, Lagos",
+    "phone": "+234 805 234 5678",
+    "website": "https://www.greenmart.com",
+    "image": "greenmart.webp",
+    "membership": 2,
+    "description": "Retail supermarket providing groceries and household items."
+  },
+  {
+    "name": "Yaba Print Hub",
+    "address": "10 University Road, Yaba, Lagos",
+    "phone": "+234 807 345 6789",
+    "website": "https://www.yabaprinthub.com",
+    "image": "print.webp",
+    "membership": 1,
+    "description": "Professional printing, branding and design services."
+  },
+  {
+    "name": "Prime Health Clinic",
+    "address": "8 Montgomery Road, Yaba, Lagos",
+    "phone": "+234 809 456 7890",
+    "website": "https://www.primehealthclinic.com",
+    "image": "clinic.webp",
+    "membership": 3,
+    "description": "Healthcare services with experienced medical professionals."
+  },
+  {
+    "name": "BlueWave Logistics",
+    "address": "40 Sabo Road, Yaba, Lagos",
+    "phone": "+234 810 567 8901",
+    "website": "https://www.bluewavelogistics.com",
+    "image": "logistics.webp",
+    "membership": 2,
+    "description": "Reliable courier and logistics company serving Lagos."
+  },
+  {
+    "name": "SmartFix Electronics",
+    "address": "18 Adekunle Street, Yaba, Lagos",
+    "phone": "+234 811 678 9012",
+    "website": "https://www.smartfixelectronics.com",
+    "image": "electronics.webp",
+    "membership": 1,
+    "description": "Repair and maintenance of phones, laptops and electronics."
+  },
+  {
+    "name": "Yaba Café",
+    "address": "6 Queens Street, Yaba, Lagos",
+    "phone": "+234 812 789 0123",
+    "website": "https://www.yabacafe.com",
+    "image": "cafe.webp",
+    "membership": 3,
+    "description": "Modern café offering coffee, pastries and light meals."
+  }
+]
