@@ -467,3 +467,34 @@ dialog li {
     }
 }
 
+
+
+.thankyou-section {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thankyou-section h2 {
+    color: #003366;
+}
+
+.application-result {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-left: 5px solid #003366;
+}
+
+.application-result p {
+    margin: 0.7rem 0;
+}
+
+.thankyou-section .cta-btn {
+    position: static;
+    display: inline-block;
+    margin-top: 1rem;
+}
