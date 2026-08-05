@@ -70,21 +70,12 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-}
-
-
-
-
-@media only screen and (min-width: 768px) {
-
-    
-    #menu {
-        display: none;
-    }
-
-    nav ul {
+        nav ul {
         display: flex;
         justify-content: center;
         gap: 2rem;
@@ -124,12 +115,7 @@
     }
 
    
-    footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-    }
+    
 
     .footer-info,
     .social {
@@ -160,3 +146,6 @@
     position: sticky;
     top: 1rem;
 }
+
+}
+
