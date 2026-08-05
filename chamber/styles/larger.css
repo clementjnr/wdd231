@@ -43,6 +43,7 @@
 
     .member-card {
         transition: transform .3s ease, box-shadow .3s ease;
+        grid-template-columns: 1fr;
     }
 
     .member-card:hover {
@@ -149,10 +150,6 @@
 .join-layout {
     grid-template-columns: 2fr 1fr;
     align-items: start;
-}
-
-.membership-cards {
-    grid-template-columns: 1fr;
 }
 
 .join-form-section {
