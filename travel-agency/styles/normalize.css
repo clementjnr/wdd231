@@ -1,3 +1,4 @@
+<<<<<<< HEAD:travel-agency/styles/normalize.css
 
 
 html {
@@ -26,3 +27,32 @@ h3,
 p {
     overflow-wrap: break-word;
 }
+=======
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+>>>>>>> 6a227e50430d6416d835316d26c8a3cd30691136:travel/styles/normalize.css
