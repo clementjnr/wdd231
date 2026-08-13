@@ -1,169 +1,283 @@
-const destinationContainer = document.querySelector("#destination-container");
-const modal = document.querySelector("#destination-modal");
-const modalContent = document.querySelector("#modal-content");
-const closeModal = document.querySelector("#close-modal");
-const menuButton = document.querySelector("#menu-button");
-const navigation = document.querySelector("#navigation");
+import { showDestinationModal } from "./modules/data.js";
+
+const destinationContainer =
+    document.querySelector("#destination-container");
+
+const featuredContainer =
+    document.querySelector("#featured-destinations");
+
+const searchInput =
+    document.querySelector("#destination-search");
+
+const menuButton =
+    document.querySelector("#menu-button");
+
+const navigation =
+    document.querySelector("#navigation");
+
+const currentYear =
+    document.querySelector("#current-year");
+
+const lastModified =
+    document.querySelector("#last-modified");
+
+const videoLink =
+    document.querySelector("#video-link");
 
 let destinations = [];
 
+
+/* Navigation */
+
+if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+    });
+}
+
+
+/* Footer */
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
+
+if (lastModified) {
+    lastModified.textContent =
+        `Last Modified: ${document.lastModified}`;
+}
+
+
+/* Load destination data */
+
 async function getDestinations() {
     try {
-        const response = await fetch("destinations.json");
+        const response =
+            await fetch("data/destinations.json");
 
         if (!response.ok) {
-            throw new Error(`HTTP error: ${response.status}`);
+            throw new Error(
+                `HTTP error: ${response.status}`
+            );
         }
 
-        destinations = await response.json();
-        displayDestinations(destinations);
+        const data = await response.json();
+
+        destinations = data.destinations;
+
+        if (destinationContainer) {
+            displayDestinations(destinations);
+        }
+
+        if (featuredContainer) {
+            displayFeaturedDestinations(
+                destinations.slice(0, 6)
+            );
+        }
 
     } catch (error) {
-        console.error("Error loading destinations:", error);
+        console.error(
+            "Unable to load destinations:",
+            error
+        );
 
         if (destinationContainer) {
             destinationContainer.innerHTML = `
-                <p>Sorry, the destinations could not be loaded.</p>
+                <p class="error-message">
+                    Sorry, we could not load the destinations.
+                    Please try again later.
+                </p>
+            `;
+        }
+
+        if (featuredContainer) {
+            featuredContainer.innerHTML = `
+                <p class="error-message">
+                    Destination information is temporarily unavailable.
+                </p>
             `;
         }
     }
 }
 
-function displayDestinations(data) {
+
+/* Destination page */
+
+function displayDestinations(items) {
     if (!destinationContainer) {
         return;
     }
 
-    destinationContainer.innerHTML = data.map((destination, index) => `
-        <article class="destination-card">
-            <div class="destination-card-content">
-                <h3>${destination.name}</h3>
+    destinationContainer.innerHTML = "";
 
-                <p>
-                    <strong>Country:</strong>
+    items.forEach((destination) => {
+        const card =
+            document.createElement("article");
+
+        card.classList.add("destination-card");
+
+        card.innerHTML = `
+            <img
+                src="${destination.image}"
+                alt="${destination.name}, ${destination.country}"
+                loading="lazy"
+                width="800"
+                height="500"
+            >
+
+            <div class="destination-card-content">
+
+                <p class="destination-country">
                     ${destination.country}
                 </p>
 
-                <p>
-                    <strong>Duration:</strong>
-                    ${destination.duration}
-                </p>
+                <h2>${destination.name}</h2>
 
                 <p>
-                    <strong>Starting Price:</strong>
-                    $${destination.price}
+                    ${destination.description}
                 </p>
 
-                <p>${destination.description}</p>
+                <div class="destination-details">
+                    <span>
+                        <strong>Duration:</strong>
+                        ${destination.duration}
+                    </span>
 
-                <button class="details-button" data-index="${index}">
+                    <span>
+                        <strong>From:</strong>
+                        $${destination.price}
+                    </span>
+                </div>
+
+                <button
+                    type="button"
+                    class="details-button"
+                    data-id="${destination.id}">
                     View Details
                 </button>
+
             </div>
-        </article>
-    `).join("");
+        `;
 
-    document.querySelectorAll(".details-button").forEach(button => {
-        button.addEventListener("click", () => {
-            const index = Number(button.dataset.index);
-            openDestinationModal(data[index]);
+        destinationContainer.appendChild(card);
+    });
+
+    document
+        .querySelectorAll(".details-button")
+        .forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+                const id =
+                    Number(button.dataset.id);
+
+                const destination =
+                    destinations.find(
+                        (item) => item.id === id
+                    );
+
+                showDestinationModal(destination);
+            });
         });
+}
+
+
+/* Homepage featured destinations */
+
+function displayFeaturedDestinations(items) {
+    if (!featuredContainer) {
+        return;
+    }
+
+    featuredContainer.innerHTML = "";
+
+    items.forEach((destination) => {
+
+        const card =
+            document.createElement("article");
+
+        card.classList.add("preview-card");
+
+        card.innerHTML = `
+            <img
+                src="${destination.image}"
+                alt="${destination.name}, ${destination.country}"
+                loading="lazy"
+                width="800"
+                height="500"
+            >
+
+            <div class="preview-card-content">
+
+                <p class="destination-country">
+                    ${destination.country}
+                </p>
+
+                <h3>${destination.name}</h3>
+
+                <p>
+                    ${destination.description}
+                </p>
+
+                <p>
+                    <strong>
+                        From $${destination.price}
+                    </strong>
+                </p>
+
+            </div>
+        `;
+
+        featuredContainer.appendChild(card);
     });
 }
 
-function openDestinationModal(destination) {
-    modalContent.innerHTML = `
-        <h2>${destination.name}</h2>
 
-        <p>
-            <strong>Country:</strong>
-            ${destination.country}
-        </p>
+/* Destination search */
 
-        <p>
-            <strong>Duration:</strong>
-            ${destination.duration}
-        </p>
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
 
-        <p>
-            <strong>Starting Price:</strong>
-            $${destination.price}
-        </p>
+        const searchTerm =
+            searchInput.value
+                .toLowerCase()
+                .trim();
 
-        <p>${destination.description}</p>
+        const filteredDestinations =
+            destinations.filter((destination) =>
+                destination.name
+                    .toLowerCase()
+                    .includes(searchTerm) ||
 
-        <a href="booking.html">
-            Book This Destination
-        </a>
-    `;
+                destination.country
+                    .toLowerCase()
+                    .includes(searchTerm)
+            );
 
-    modal.showModal();
-
-    localStorage.setItem(
-        "selectedDestination",
-        JSON.stringify(destination)
-    );
-}
-
-if (closeModal) {
-    closeModal.addEventListener("click", () => {
-        modal.close();
+        displayDestinations(
+            filteredDestinations
+        );
     });
 }
 
-if (menuButton && navigation) {
-    menuButton.addEventListener("click", () => {
-        navigation.classList.toggle("open");
+
+/* Project video */
+
+if (videoLink) {
+    videoLink.addEventListener("click", (event) => {
+        if (videoLink.getAttribute("href") === "#") {
+            event.preventDefault();
+            alert(
+                "The project demonstration video will be added here."
+            );
+        }
     });
 }
+
 
 getDestinations();
-
-export { getDestinations, displayDestinations };
-function openDestinationModal(destination) {
-    modalContent.innerHTML = `
-        <h2>${destination.name}</h2>
-        <p><strong>Country:</strong> ${destination.country}</p>
-        <p><strong>Trip Duration:</strong> ${destination.duration}</p>
-        <p><strong>Starting Price:</strong> $${destination.price}</p>
-        <p>${destination.description}</p>
-        <a href="booking.html">Book This Destination</a>
-    `;
-
-    modal.showModal();
-
-    localStorage.setItem(
-        "selectedDestination",
-        JSON.stringify(destination)
-    );
-}
-
-if (closeModal) {
-    closeModal.addEventListener("click", () => {
-        modal.close();
-    });
-}
-
-if (menuButton && navigation) {
-    menuButton.addEventListener("click", () => {
-        navigation.classList.toggle("open");
-    });
-}
-
-function loadDestinations() {
-    try {
-        displayDestinations(destinations);
-    } catch (error) {
-        console.error("Unable to load destinations:", error);
-
-        if (destinationContainer) {
-            destinationContainer.innerHTML = `
-                <p>Sorry, destinations could not be loaded.</p>
-            `;
-        }
-    }
-}
-
-loadDestinations();
-
-export { displayDestinations };
