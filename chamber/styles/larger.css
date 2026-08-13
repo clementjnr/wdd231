@@ -43,6 +43,7 @@
 
     .member-card {
         transition: transform .3s ease, box-shadow .3s ease;
+        grid-template-columns: 1fr;
     }
 
     .member-card:hover {
@@ -69,21 +70,12 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-}
-
-
-
-
-@media only screen and (min-width: 768px) {
-
-    
-    #menu {
-        display: none;
-    }
-
-    nav ul {
+        nav ul {
         display: flex;
         justify-content: center;
         gap: 2rem;
@@ -123,12 +115,7 @@
     }
 
    
-    footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-    }
+    
 
     .footer-info,
     .social {
@@ -140,5 +127,25 @@
         justify-content: center;
         gap: 1rem;
     }
+}
+
+
+
+
+
+.join-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+}
+
+.join-form-section {
+    min-width: 0;
+}
+
+.membership-section {
+    position: sticky;
+    top: 1rem;
+}
+
 }
 
