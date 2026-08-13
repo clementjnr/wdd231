@@ -3,10 +3,7 @@ const modalContent = document.querySelector("#modal-content");
 const closeModalButton = document.querySelector("#close-modal");
 
 export function showDestinationModal(destination) {
-<<<<<<< HEAD
 
-=======
->>>>>>> cb4619433b3828416edd52da05fe91ac28cf16e8
     if (!modal || !modalContent || !destination) {
         return;
     }
@@ -112,3 +109,4 @@ if (modal) {
     });
 
 }
+
