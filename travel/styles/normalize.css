@@ -1,5 +1,3 @@
-
-
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -20,9 +18,10 @@ button {
     cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-p {
-    overflow-wrap: break-word;
+img {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
 }
