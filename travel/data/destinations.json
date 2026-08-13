@@ -1,0 +1,139 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Dubai",
+      "country": "United Arab Emirates",
+      "price": 850,
+      "duration": "5 days",
+      "description": "Experience modern architecture, desert adventures, luxury shopping, and unforgettable city views in Dubai.",
+      "image": "images/dubai.jfif"
+    },
+    {
+      "id": 2,
+      "name": "London",
+      "country": "United Kingdom",
+      "price": 1200,
+      "duration": "7 days",
+      "description": "Explore historic landmarks, royal palaces, museums, shopping districts, and the vibrant culture of London.",
+      "image": "images/london.jfif"
+    },
+    {
+      "id": 3,
+      "name": "Paris",
+      "country": "France",
+      "price": 1100,
+      "duration": "6 days",
+      "description": "Discover iconic landmarks, beautiful streets, art galleries, museums, and the romantic atmosphere of Paris.",
+      "image": "images/paris.jfif"
+    },
+    {
+      "id": 4,
+      "name": "Rome",
+      "country": "Italy",
+      "price": 1050,
+      "duration": "6 days",
+      "description": "Walk through ancient history while enjoying Italian food, beautiful architecture, and famous Roman landmarks.",
+      "image": "images/rome.jfif"
+    },
+    {
+      "id": 5,
+      "name": "New York",
+      "country": "United States",
+      "price": 1350,
+      "duration": "7 days",
+      "description": "Experience Times Square, Central Park, museums, shopping, entertainment, and the energy of New York City.",
+      "image": "images/new-york.jfif"
+    },
+    {
+      "id": 6,
+      "name": "Toronto",
+      "country": "Canada",
+      "price": 1250,
+      "duration": "7 days",
+      "description": "Enjoy Canada's diverse culture, city attractions, waterfront views, and easy access to natural wonders.",
+      "image": "images/toronto.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Cape Town",
+      "country": "South Africa",
+      "price": 750,
+      "duration": "5 days",
+      "description": "Explore stunning beaches, Table Mountain, beautiful scenery, local cuisine, and South African culture.",
+      "image": "images/cape-town.jfif"
+    },
+    {
+      "id": 8,
+      "name": "Nairobi",
+      "country": "Kenya",
+      "price": 650,
+      "duration": "5 days",
+      "description": "Combine city life with unforgettable wildlife experiences and discover Kenya's unique natural beauty.",
+      "image": "images/new-york.jfif"
+    },
+    {
+      "id": 9,
+      "name": "Cairo",
+      "country": "Egypt",
+      "price": 800,
+      "duration": "6 days",
+      "description": "Discover ancient Egyptian history, the pyramids, museums, markets, and the fascinating Nile River.",
+      "image": "images/rome.jfif"
+    },
+    {
+      "id": 10,
+      "name": "Zanzibar",
+      "country": "Tanzania",
+      "price": 700,
+      "duration": "5 days",
+      "description": "Relax on beautiful beaches, explore Stone Town, and experience the tropical culture of Zanzibar.",
+      "image": "images/paris.jfif"
+    },
+    {
+      "id": 11,
+      "name": "Accra",
+      "country": "Ghana",
+      "price": 550,
+      "duration": "4 days",
+      "description": "Experience Ghanaian culture, beaches, history, food, music, and the lively atmosphere of Accra.",
+      "image": "images/london.jfif"
+    },
+    {
+      "id": 12,
+      "name": "Tokyo",
+      "country": "Japan",
+      "price": 1500,
+      "duration": "8 days",
+      "description": "Experience futuristic technology, traditional culture, incredible food, shopping, and the energy of Tokyo.",
+      "image": "images/dubai.jfif"
+    },
+    {
+      "id": 13,
+      "name": "Singapore",
+      "country": "Singapore",
+      "price": 1300,
+      "duration": "6 days",
+      "description": "Explore a modern city filled with impressive architecture, gardens, shopping, and world-class attractions.",
+      "image": "images/cape-town.jfif"
+    },
+    {
+      "id": 14,
+      "name": "Istanbul",
+      "country": "Türkiye",
+      "price": 950,
+      "duration": "6 days",
+      "description": "Discover a city where Europe and Asia meet, with historic mosques, markets, food, and beautiful waterways.",
+      "image": "images/toronto.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "price": 1150,
+      "duration": "6 days",
+      "description": "Enjoy canals, museums, cycling routes, historic neighborhoods, and the relaxed atmosphere of Amsterdam.",
+      "image": "images/rome.jfif"
+    }
+  ]
+}
