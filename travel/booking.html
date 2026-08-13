@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Trip | Clement Travels</title>
+    <meta name="description" content="Book your next adventure with Clement Travels using our simple travel booking form.">
+    <meta name="author" content="Paul Clement">
+
+    <meta property="og:title" content="Book Your Trip | Clement Travels">
+    <meta property="og:description" content="Complete the booking form and start planning your next unforgettable journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clementjnr.github.io/wdd231/travel-agency/booking.html">
+    <meta property="og:image" content="https://clementjnr.github.io/wdd231/travel-agency/images/travel.jpg">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/booking.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="site-header">
+            <a href="index.html" class="logo">Clement Travels</a>
+
+            <button id="menu-button" aria-label="Open navigation menu">
+                ☰
+            </button>
+        </div>
+
+        <nav id="navigation">
+            <a href="index.html">Home</a>
+            <a href="destination.html">Destinations</a>
+            <a href="booking.html" class="active">Book a Trip</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1>Book Your Trip</h1>
+            <p>Tell us about your next adventure.</p>
+        </section>
+
+        <section class="form-section">
+            <h2>Travel Booking Form</h2>
+
+            <form action="thankyou.html" method="get">
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination" required>
+                    <option value="">Select a destination</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="London">London</option>
+                    <option value="Paris">Paris</option>
+                    <option value="New York">New York</option>
+                    <option value="Cape Town">Cape Town</option>
+                </select>
+
+                <label for="travel-date">Travel Date</label>
+                <input type="date" id="travel-date" name="travel-date" required>
+
+                <label for="travelers">Number of Travelers</label>
+                <input type="number" id="travelers" name="travelers" min="1" max="20" required>
+
+                <label for="message">Special Requests</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+
+                <button type="submit">Submit Booking Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Clement Travels | Paul Clement</p>
+        <a href="attributions.html">Attributions</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">Project Video</a>
+    </footer>
+</body>
+</html>
