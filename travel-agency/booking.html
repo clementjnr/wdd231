@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plan a Trip | Clement Travels</title>
+
+    <meta name="description"
+        content="Plan your next journey with Clement Travels using our travel planning form.">
+
+    <meta name="author" content="Paul Clement">
+
+    <meta property="og:title" content="Plan a Trip | Clement Travels">
+    <meta property="og:description"
+        content="Start planning your next journey with Clement Travels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url"
+        content="https://clementjnr.github.io/wdd231/travel-agency/booking.html">
+    <meta property="og:image"
+        content="https://clementjnr.github.io/wdd231/travel-agency/images/hero.webp">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/booking.js" type="module"></script>
+</head>
+
+<body>
+
+<header>
+    <div class="site-header">
+
+        <a href="index.html" class="brand">
+            <span class="brand-icon" aria-hidden="true">✈️</span>
+
+            <span>
+                <strong>Clement Travels</strong>
+                <small>Explore. Discover. Experience.</small>
+            </span>
+        </a>
+
+        <button
+            id="menu-button"
+            class="menu-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation">
+            ☰
+        </button>
+
+        <nav id="navigation" class="navigation" aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="destinations.html">Destinations</a>
+                </li>
+
+                <li>
+                    <a href="booking.html"
+                       class="active"
+                       aria-current="page">
+                        Plan a Trip
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="page-hero">
+
+        <h1>Plan Your Trip</h1>
+
+        <p>
+            Tell us about the journey you would like to take.
+        </p>
+
+    </section>
+
+    <section class="form-section">
+
+        <div class="section-heading">
+
+            <p class="section-label">START PLANNING</p>
+
+            <h2>Travel Planning Form</h2>
+
+            <p>
+                Complete the form below and submit your travel request.
+            </p>
+
+        </div>
+
+        <form action="thankyou.html" method="get">
+
+            <label for="name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name">
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email">
+
+            <label for="phone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                autocomplete="tel">
+
+            <label for="destination">
+                Destination
+            </label>
+
+            <select
+                id="destination"
+                name="destination"
+                required>
+
+                <option value="">
+                    Select a destination
+                </option>
+
+                <option value="Dubai">Dubai</option>
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="Rome">Rome</option>
+                <option value="New York">New York</option>
+                <option value="Toronto">Toronto</option>
+                <option value="Cape Town">Cape Town</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Cairo">Cairo</option>
+                <option value="Zanzibar">Zanzibar</option>
+                <option value="Accra">Accra</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Istanbul">Istanbul</option>
+                <option value="Amsterdam">Amsterdam</option>
+
+            </select>
+
+            <label for="travel-date">
+                Travel Date
+            </label>
+
+            <input
+                type="date"
+                id="travel-date"
+                name="travel-date"
+                required>
+
+            <label for="travelers">
+                Number of Travelers
+            </label>
+
+            <input
+                type="number"
+                id="travelers"
+                name="travelers"
+                min="1"
+                max="20"
+                required>
+
+            <label for="message">
+                Special Requests
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="5"></textarea>
+
+            <button type="submit">
+                Submit Booking Request
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <h2>Clement Travels</h2>
+            <p>Explore. Discover. Experience.</p>
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="booking.html">Plan a Trip</a>
+            <a href="attributions.html">Attributions</a>
+
+        </div>
+
+        <div class="footer-video">
+
+            <h3>Project Demonstration</h3>
+
+            <a href="https://www.youtube.com/"
+               target="_blank"
+               rel="noopener">
+                JavaScript Demonstration Video
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

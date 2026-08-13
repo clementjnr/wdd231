@@ -1,92 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Destinations | Clement Travels
-    </title>
+    <title>Destinations | Clement Travels</title>
 
     <meta name="description"
-        content="Explore destinations around the world and discover your next adventure with Clement Travels.">
+        content="Explore travel destinations around the world with Clement Travels.">
 
-    <meta name="author"
-        content="Paul Clement">
+    <meta name="author" content="Paul Clement">
 
-    <meta property="og:title"
-        content="Destinations | Clement Travels">
-
+    <meta property="og:title" content="Destinations | Clement Travels">
     <meta property="og:description"
-        content="Explore amazing destinations and discover your next adventure with Clement Travels.">
-
-    <meta property="og:type"
-        content="website">
-
+        content="Explore exciting travel destinations with Clement Travels.">
+    <meta property="og:type" content="website">
     <meta property="og:url"
-        content="https://clementjnr.github.io/wdd231/travel-agency/destination.html">
-
+        content="https://clementjnr.github.io/wdd231/travel-agency/destinations.html">
     <meta property="og:image"
         content="https://clementjnr.github.io/wdd231/travel-agency/images/hero.webp">
 
-    <link rel="icon"
-        href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
 
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
-    <link rel="stylesheet"
-        href="styles/small.css">
-
-    <link rel="stylesheet"
-        href="styles/larger.css">
-
-    <script
-        src="scripts/main.js"
-        type="module">
-    </script>
-
+    <script src="scripts/main.js" type="module"></script>
 </head>
-
 
 <body>
 
 <header>
-
     <div class="site-header">
 
-        <a href="index.html"
-            class="brand">
-
-            <span class="brand-icon"
-                aria-hidden="true">
-                ✈️
-            </span>
+        <a href="index.html" class="brand">
+            <span class="brand-icon" aria-hidden="true">✈️</span>
 
             <span>
                 <strong>Clement Travels</strong>
-                <small>
-                    Explore. Discover. Experience.
-                </small>
+                <small>Explore. Discover. Experience.</small>
             </span>
-
         </a>
-
 
         <button
             id="menu-button"
@@ -98,11 +59,7 @@
             ☰
         </button>
 
-
-        <nav
-            id="navigation"
-            class="navigation"
-            aria-label="Main navigation">
+        <nav id="navigation" class="navigation" aria-label="Main navigation">
 
             <ul>
 
@@ -113,16 +70,16 @@
                 </li>
 
                 <li>
-                    <a href="destination.html"
-                        class="active"
-                        aria-current="page">
+                    <a href="destinations.html"
+                       class="active"
+                       aria-current="page">
                         Destinations
                     </a>
                 </li>
 
                 <li>
                     <a href="booking.html">
-                        Book a Trip
+                        Plan a Trip
                     </a>
                 </li>
 
@@ -131,77 +88,50 @@
         </nav>
 
     </div>
-
 </header>
-
 
 <main>
 
     <section class="page-hero">
 
-        <div class="page-hero-content">
+        <h1>Explore Our Destinations</h1>
 
-            <p class="section-label">
-                EXPLORE
-            </p>
-
-            <h1>
-                Explore Our Destinations
-            </h1>
-
-            <p>
-                Discover amazing places and start
-                planning your next adventure.
-            </p>
-
-        </div>
+        <p>
+            Discover amazing places and start planning your next adventure.
+        </p>
 
     </section>
-
 
     <section class="destination-section">
 
         <div class="section-heading">
 
-            <h2>
-                Popular Destinations
-            </h2>
+            <p class="section-label">EXPLORE THE WORLD</p>
+
+            <h2>Popular Destinations</h2>
 
             <p>
-                Search through our available
-                destinations.
+                Browse our destinations and select one to learn more.
             </p>
 
         </div>
 
+        <label for="destination-search">
+            Search destinations
+        </label>
 
-        <div class="search-box">
+        <input
+            type="search"
+            id="destination-search"
+            placeholder="Search by destination or country">
 
-            <label for="destination-search">
-                Search destinations
-            </label>
+        <div id="destination-container" class="destination-grid">
 
-            <input
-                type="search"
-                id="destination-search"
-                placeholder="Search by destination or country"
-                autocomplete="off">
-
-        </div>
-
-
-        <div
-            id="destination-container"
-            class="destination-grid">
-
-            <p>
-                Loading destinations...
-            </p>
+            <p>Loading destinations...</p>
 
         </div>
 
     </section>
-
 
     <dialog
         id="destination-modal"
@@ -212,7 +142,6 @@
             <button
                 id="close-modal"
                 type="button"
-                class="modal-close"
                 aria-label="Close destination details">
                 ×
             </button>
@@ -225,57 +154,33 @@
 
 </main>
 
-
 <footer>
 
     <div class="footer-content">
 
-        <div class="footer-brand">
-
-            <h2>
-                Clement Travels
-            </h2>
-
-            <p>
-                Explore. Discover. Experience.
-            </p>
-
+        <div>
+            <h2>Clement Travels</h2>
+            <p>Explore. Discover. Experience.</p>
         </div>
-
 
         <div class="footer-links">
 
-            <h3>
-                Quick Links
-            </h3>
+            <h3>Quick Links</h3>
 
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="destination.html">
-                Destinations
-            </a>
-
-            <a href="booking.html">
-                Book a Trip
-            </a>
-
-            <a href="attributions.html">
-                Attributions
-            </a>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="booking.html">Plan a Trip</a>
+            <a href="attributions.html">Attributions</a>
 
         </div>
 
-
         <div class="footer-video">
 
-            <h3>
-                Project Demonstration
-            </h3>
+            <h3>Project Demonstration</h3>
 
-            <a href="#"
-                id="video-link">
+            <a href="https://www.youtube.com/"
+               target="_blank"
+               rel="noopener">
                 JavaScript Demonstration Video
             </a>
 
@@ -283,18 +188,14 @@
 
     </div>
 
-
     <div class="footer-bottom">
 
         <p>
-            &copy;
-            <span id="current-year"></span>
-            Clement Travels
+            &copy; <span id="current-year"></span> Clement Travels
         </p>
 
         <p>
-            WDD 231 Individual Website Project |
-            Paul Clement
+            WDD 231 Individual Website Project | Paul Clement
         </p>
 
         <p id="last-modified"></p>
@@ -305,3 +206,4 @@
 
 </body>
 </html>
+

@@ -1,3 +1,4 @@
+
 {
   "destinations": [
     {
@@ -70,7 +71,7 @@
       "price": 650,
       "duration": "5 days",
       "description": "Combine city life with unforgettable wildlife experiences and discover Kenya's unique natural beauty.",
-      "image": "images/new-york.jfif"
+      "image": "images/cape-town.jfif"
     },
     {
       "id": 9,
